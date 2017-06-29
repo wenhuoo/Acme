@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Acme.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td colspan="3" style="height: 30%; font-size: x-large; font-weight: bold; font-family:Calibri">
+                        <asp:Image ID="Logo" runat="server" src="Images/Logo.png" Height="138px" Width="148px" />
+                        Acme Inc: Best place for online shopping.</td>
+                </tr>
+                <tr>
+                    <td style="width: 10%;">Navigation
+                        <br />
+                        <asp:HyperLink ID="hlIndex" runat="server" NavigateUrl="~/Index.aspx">Welcome</asp:HyperLink><br />
+                        <asp:HyperLink ID="hlCust" runat="server" NavigateUrl="~/Customer.aspx">Customer</asp:HyperLink><br />
+                        <asp:HyperLink ID="hlQuer" runat="server" NavigateUrl="~/Queries.aspx">Queries</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1"
+                            runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
